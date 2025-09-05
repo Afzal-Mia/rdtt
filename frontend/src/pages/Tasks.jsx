@@ -12,7 +12,7 @@ export default function Tasks() {
   const [editingTask, setEditingTask] = useState(null);
   const [form, setForm] = useState({ title: "", description: "" });
   const [modalLoading, setModalLoading] = useState(false);
-  const [taskLoadingIds, setTaskLoadingIds] = useState([]); // array of loading task IDs
+  const [taskLoadingIds, setTaskLoadingIds] = useState([]); 
   const navigate = useNavigate();
 
   const fetchTasks = async () => {

@@ -17,12 +17,12 @@ export const AuthProvider = ({ children }) => {
 
   // Axios instance with token
   const api = axios.create({
-    baseURL: "http://localhost:1200",
+    baseURL: "https://rdtt-6pzk.onrender.com",
     headers: { Authorization: `Bearer ${token}` },
   });
 
   const login = async (email, password) => {
-    const res = await axios.post("http://localhost:1200/user/login", {
+    const res = await axios.post("https://rdtt-6pzk.onrender.com/user/login", {
       email,
       password,
     });
@@ -31,7 +31,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const register = async (userName, email, password) => {
-    const res = await axios.post("http://localhost:1200/user/register", {
+    const res = await axios.post("https://rdtt-6pzk.onrender.com/user/register", {
       userName,
       email,
       password,
